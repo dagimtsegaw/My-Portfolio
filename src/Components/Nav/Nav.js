@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Nav.css";
 import {
   BrowserRouter as Router,
   Routes,
@@ -61,12 +62,7 @@ export default function Nav() {
   };
   return (
     <nav className={`nav ${navPositionClass}`}>
-      {renderNavLink(
-        "/About",
-        astronautHelmet,
-        "astronautHelmet icon",
-        "nav-about"
-      )}
+      {renderNavLink("/", astronautHelmet, "astronautHelmet icon", "nav-about")}
       {renderNavLink("/Skills", deadEye, "deadEye icon", "nav-skills")}
       {renderNavLink("/Projects", stack, "stack icon", "nav-projects")}
       {renderNavLink("/contact", envelope, "envelope icon", "nav-contact")}
