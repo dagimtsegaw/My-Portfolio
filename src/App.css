@@ -3,4 +3,13 @@
 body {
   font-family: "Russo One", sans-serif;
   color: white;
+  -webkit-tap-highlight-color: transparent;
+}
+:root {
+  --purple: #540351;
+  --blue: #3627b1;
+  --cyan: #25afce;
+  --transparent: #00000000;
+  --radius-left: 3rem 0 0 3rem;
+  --radius-right: 0 3rem 3rem 0;
 }
