@@ -1,3 +1,33 @@
-body {
-  background-color: blue;
+.nav {
+  position: fixed;
+  display: flex;
+  align-items: flex-start;
+  top: 3rem;
+  left: 50%;
+  gap: 1.526rem;
+}
+.nav-about {
+  transform: translateX(-1.56rem);
+}
+.nav-skills {
+  transform: translateX(-6rem);
+}
+.nav-projects {
+  transform: translateX(-10.94rem);
+}
+.nav-contact {
+  transform: translateX(-15.62rem);
+}
+a {
+  width: 3.125rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+}
+.page-title {
+  font-size: 0.875rem;
+  color: white;
+  cursor: default;
 }
