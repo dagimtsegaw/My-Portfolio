@@ -50,6 +50,15 @@ a {
   }
   .nav {
     top: calc(100vh - 8rem);
-    translate: translate(-50%);
+    transform: translateX(-50%);
+  }
+  .nav-link {
+    width: 2rem;
+  }
+  .nav-link img {
+    width: 2rem;
+  }
+  .page-title {
+    display: none;
   }
 }
