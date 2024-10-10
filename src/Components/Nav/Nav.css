@@ -41,3 +41,15 @@ a {
 .nav-link.current {
   opacity: 1;
 }
+@media (max-width: 1110px) {
+  .nav-about,
+  .nav-skills,
+  .nav-contact,
+  .nav-projects {
+    transform: translateX(0);
+  }
+  .nav {
+    top: calc(100vh - 8rem);
+    translate: translate(-50%);
+  }
+}
