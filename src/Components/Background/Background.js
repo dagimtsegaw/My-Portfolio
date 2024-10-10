@@ -4,7 +4,22 @@ import video from "../../assets/bg-universe.mp4";
 import fallbackImage from "../../fallback-image.pngassets/";
 
 const Background = () => {
-  return <div>Background</div>;
+  return (
+    <>
+      <div>
+        <video
+          playsInline
+          autoPlay
+          muted
+          loop
+          preload="auto"
+          poster={fallbackImage}
+        >
+          <source src={video} type="video?mp4"></source>
+        </video>
+      </div>
+    </>
+  );
 };
 
 export default Background;
