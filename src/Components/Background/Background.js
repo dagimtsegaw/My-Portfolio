@@ -16,7 +16,7 @@ const Background = () => {
         poster={fallbackImage}
         id="bg"
       >
-        <source src={video} type="video?mp4"></source>
+        <source src={video} type="video/mp4"></source>
       </video>
     </>
   );
