@@ -5,12 +5,12 @@ const PlayerStats = () => {
   return (
     <>
       <div id="playerStats">
-        <h1>DAGIM TSEGAW LEVEL 44</h1>
+        <h1>DAGIM TSEGAW LEVEL 55</h1>
         <div id="playerStats_lines">
-          <span id="player_lines_thick"></span>
-          <span id="player_lines_thin"></span>
-          <h2>Fullstack Developer</h2>
+          <span id="playerStats_line_thick"></span>
+          <span id="playerStats_line_thin"></span>
         </div>
+        <h2>Fullstack Developer</h2>
       </div>
     </>
   );
