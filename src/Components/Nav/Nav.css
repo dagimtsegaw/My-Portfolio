@@ -31,3 +31,13 @@ a {
   color: white;
   cursor: default;
 }
+.nav-link {
+  opacity: 0.7;
+}
+
+.nav-link:hover {
+  opacity: 1;
+}
+.nav-link.current {
+  opacity: 1;
+}
