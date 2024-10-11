@@ -1,0 +1,11 @@
+.avatar {
+  position: fixed;
+  overflow: hidden;
+  z-index: -2;
+}
+.avatar.about {
+  height: 89vh;
+  bottom: -8vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
