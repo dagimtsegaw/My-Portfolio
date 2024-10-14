@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import "./abotMenu.css";
 
-const AboutSubheading = (title, onClick, active, content, menuItem) => {
+const AboutSubheading = ({ title, onClick, active, content, menuItem }) => {
   const subContainerClass = `subcontainer-${menuItem}`;
   return (
     <div
