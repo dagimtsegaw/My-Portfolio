@@ -66,3 +66,35 @@
   background: linear-gradient(90deg, var(--cyan), var(--transparent) 100%);
   border-radius: var(--radius-right);
 }
+
+.item.active {
+  position: relative;
+  cursor: default;
+}
+
+.p-container {
+  display: none;
+}
+.active-subheading .p-container {
+  display: block;
+}
+
+.icon-container {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 0.5rem;
+  cursor: default;
+}
+
+.icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+.sub-container-1 h3,
+.sub-container-2 h3,
+.sub-container-3 h3 {
+  position: relative;
+  margin: 0.2rem 0;
+  padding: 0.5rem 0 0.5rem 1rem;
+}
