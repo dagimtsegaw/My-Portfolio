@@ -98,3 +98,42 @@
   margin: 0.2rem 0;
   padding: 0.5rem 0 0.5rem 1rem;
 }
+@media (max-width: 700px) {
+  .sub-container {
+    right: 1rem;
+  }
+  .item.active .title {
+    font-size: 1rem;
+  }
+  .item {
+    height: 2rem;
+  }
+}
+@media (max-width: 700px) {
+  .sub-container {
+    width: 15rem;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .title {
+    font-size: 0.8rem;
+    padding-right: 2.5rem;
+  }
+  .active-subheading .p-container {
+    font-size: 0.8rem;
+  }
+
+  .ico-title-container,
+  .icon {
+    display: none;
+  }
+  h1 {
+    font-size: 0.8rem;
+  }
+  h2,
+  h3,
+  p {
+    font-size: 0.8rem;
+  }
+}
