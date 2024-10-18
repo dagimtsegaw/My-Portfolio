@@ -1,0 +1,68 @@
+.menu {
+  width: 19rem;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 60%;
+  transform: translateY(-60%);
+  left: 10vw;
+}
+.item {
+  height: 3rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 1rem;
+  padding-right: 2.5rem;
+}
+
+.item.active .title {
+  font-size: 1.5rem;
+}
+
+.sub-container {
+  width: 18.5rem;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 32%;
+  right: 10vw;
+  cursor: pointer;
+}
+.active-subheading {
+  cursor: default;
+}
+.item.active:nth-child(1) {
+  background: linear-gradient(90deg, var(--transparent), var(--purple));
+  border-radius: var(--radius-right);
+}
+.item.active:nth-child(2) {
+  background: linear-gradient(90deg, var(--transparent), var(--blue));
+  border-radius: var(--radius-right);
+}
+.item.active:nth-child(3) {
+  background: linear-gradient(90deg, var(--transparent), var(--cyan));
+  border-radius: var(--radius-right);
+}
+.sub-container-1.active-subheading h3,
+.sub-container-2.active-subheading h3,
+.sub-container-3.active-subheading h3 {
+  border-radius: var(--radius-left);
+}
+
+.sub-container-1.active-subheading h3 {
+  background: linear-gradient(90deg, var(--purple), var(--transparent) 100%);
+  border-radius: var(--radius-right);
+}
+.sub-container-2.active-subheading h3 {
+  background: linear-gradient(90deg, var(--blue), var(--transparent) 100%);
+  border-radius: var(--radius-right);
+}
+.sub-container-3.active-subheading h3 {
+  background: linear-gradient(90deg, var(--cyan), var(--transparent) 100%);
+  border-radius: var(--radius-right);
+}

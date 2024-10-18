@@ -1,8 +1,8 @@
 import React from "react";
 import classNames from "classnames";
-import "./abotMenu.css";
+import "./aboutMenu.css";
 
-const AboutMenuItem = ({ title, onClick, active }) => {
+const AboutMenuItem = ({ title, active, onClick }) => {
   return (
     <div className={classNames("item", { active })} onClick={onClick}>
       <h2 className="title">{title}</h2>

@@ -1,13 +1,13 @@
 import React from "react";
 import classNames from "classnames";
-import "./abotMenu.css";
+import "./aboutMenu.css";
 
-const AboutSubheading = ({ title, onClick, active, content, menuItem }) => {
-  const subContainerClass = `subcontainer-${menuItem}`;
+const AboutSubheading = ({ title, content, active, onClick, menuItem }) => {
+  const subContainerClass = `sub-container-${menuItem}`;
   //the return that will be rendered on the page
   return (
     <div
-      className={classNames({ "active-subheading": active })}
+      className={classNames(subContainerClass, { "active-subheading": active })}
       onClick={onClick}
     >
       <h3 onClick={onClick}>{title}</h3>

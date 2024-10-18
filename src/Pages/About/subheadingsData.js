@@ -1,7 +1,7 @@
 const subheadingsData = {
   1: [
     {
-      title: "About me",
+      title: "About Me",
       content: (
         <>
           <p>
