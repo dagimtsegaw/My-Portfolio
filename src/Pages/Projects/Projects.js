@@ -1,7 +1,12 @@
-import React from "react";
+import React, { Component } from "react";
+import ProjectsMenu from "./ProjectsMenu";
 
-function Projects() {
-  return <div>Projects</div>;
+export default class Projects extends Component {
+  render() {
+    return (
+      <>
+        <ProjectsMenu />;
+      </>
+    );
+  }
 }
-
-export default Projects;
