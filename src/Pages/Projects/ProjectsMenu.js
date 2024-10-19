@@ -9,6 +9,7 @@ export default class extends Component {
       activeProject: 1,
     };
   }
+  //onclick event function that handles when it is clicked
   handleProjectClick = (project) => {
     this.setState({
       activeProject: project,
