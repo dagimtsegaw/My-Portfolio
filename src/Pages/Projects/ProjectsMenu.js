@@ -14,6 +14,7 @@ export default class extends Component {
       activeProject: project,
     });
   };
+  ///render content by accssing from the project data
   renderContent = (projects) => {
     return projects.map((project, index) => (
       <div key={index} className={`project-sub-container-${index + 1}`}>
