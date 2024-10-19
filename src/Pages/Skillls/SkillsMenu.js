@@ -38,6 +38,7 @@ export default class SkillsMenu extends Component {
       </div>
     ));
   };
+  //render and also returns content on the skills page
   render() {
     const { activeMenuItem } = this.state;
     const menuItems = ["FRONT-END", "BACK-END"];
