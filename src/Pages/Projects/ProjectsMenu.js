@@ -31,6 +31,7 @@ export default class extends Component {
       </div>
     ));
   };
+  //rendering on the project page
   render() {
     const { activeProject } = this.state;
     const projectItems = ["PROJECT ONE", "PROJECT TWO", "PROJECT THREE"];
