@@ -17,6 +17,7 @@ export default class SkillsMenu extends Component {
   handleMenuItemClick = (menuItem) => {
     this.setState({ activeMenuItem: menuItem });
   };
+  //render content on the skills page
   renderContent = (skills) => {
     return skills.map((skill, index) => (
       <div
