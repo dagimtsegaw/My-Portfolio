@@ -13,7 +13,7 @@ export default class SkillsMenu extends Component {
       activeMenuItem: 1,
     };
   }
-
+  //onclick event function that handles when it is clicked
   handleMenuItemClick = (menuItem) => {
     this.setState({ activeMenuItem: menuItem });
   };
