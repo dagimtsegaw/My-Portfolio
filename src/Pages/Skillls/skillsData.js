@@ -28,10 +28,6 @@ const skills = {
       title: "React JS",
       level: 3,
     },
-    {
-      title: "Figma",
-      level: 4,
-    },
   ],
   2: [
     {

@@ -19,7 +19,10 @@ export default class SkillsMenu extends Component {
   };
   renderContent = (skills) => {
     return skills.map((skill, index) => (
-      <div key={index} className={`skill-sub-container`}>
+      <div
+        key={index}
+        className={`skill-sub-container-${this.state.activeMenuItem}`}
+      >
         <h3>{skill.title}</h3>
         <div className="level-container">
           {[...Array(6)].map((_, i) => (
@@ -52,7 +55,7 @@ export default class SkillsMenu extends Component {
             <h2 className="skill-title">{item}</h2>
           </div>
         ))}
-        <img className="skil--icon" src={currentIcon} alt="current skill" />
+        <img className="skill-icon" src={currentIcon} alt="current skill" />
         <div className="skill-sub-container">
           {this.renderContent(skills[activeMenuItem])}
         </div>
