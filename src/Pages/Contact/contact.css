@@ -81,3 +81,23 @@ button {
 label {
   display: none;
 }
+@media (max-width: 1100px) {
+  .contact-menu {
+    top: 50%;
+  }
+}
+@media (max-width: 700px) {
+  .contact-menu {
+    top: 50%;
+  }
+  form {
+    width: 100%;
+  }
+  input,
+  #message {
+    width: 92%;
+  }
+  .success-message p {
+    padding: 0 0.5rem;
+  }
+}
