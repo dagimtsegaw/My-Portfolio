@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import projects from "./projectsData";
 import classNames from "classnames";
+import "./projectsMenu.css";
 
 export default class extends Component {
   constructor(props) {
@@ -43,7 +44,7 @@ export default class extends Component {
           {projectItems.map((item, index) => (
             <div
               key={index}
-              className={classNames("project-iem", {
+              className={classNames("project-item", {
                 activeProject: activeProject === index + 1,
               })}
               onClick={() => this.handleProjectClick(index + 1)}
