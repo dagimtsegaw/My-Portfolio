@@ -1,7 +1,12 @@
 import React from "react";
+import ContactMenu from "./ContactMenu";
 
-function Contact() {
-  return <div>Contact</div>;
-}
+const Contact = () => {
+  return (
+    <div>
+      <ContactMenu />
+    </div>
+  );
+};
 
 export default Contact;
