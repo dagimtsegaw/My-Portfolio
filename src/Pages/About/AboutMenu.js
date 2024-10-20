@@ -5,7 +5,6 @@ import subheadingsData from "./subheadingsData";
 import personalIcon from "../../assets/moebius-triangle.png";
 import educationIcon from "../../assets/upgrade.png";
 import carrerIcon from "../../assets/triple-corn.png";
-import "../Skills/skillsMenu.css";
 
 export default class AboutMenu extends Component {
   constructor(props) {

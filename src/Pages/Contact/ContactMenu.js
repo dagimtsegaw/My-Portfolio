@@ -32,28 +32,29 @@ export default function ContactMenu() {
 
     const sanitizedData = {
       name: "Name:" + DOMPurify.sanitize(name),
-      name: "Email:" + DOMPurify.sanitize(email),
-      name: "Message:" + DOMPurify.sanitize(message),
+      email: "Email:" + DOMPurify.sanitize(email),
+      message: "Message:" + DOMPurify.sanitize(message),
     };
 
     const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
     const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
     const userID = process.env.REACT_APP_EMAILJS_USER_ID;
+    emailjs
+      .send(serviceID, templateID, sanitizedData, userID)
+      .then((res) => {
+        console.log("Email is sent successfully", res.text);
+        setFormData(initialState);
+        setErrors({});
+        setIsSent(true);
+      })
+      .catch((err) => {
+        console.error("Email sending failed", err);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
   };
-  emailjs
-    .send(serviceID, templateID, sanitizedData, userID)
-    .then((res) => {
-      console.log("Email is sent successfully", res.text);
-      setFormData(initialState);
-      setErrors({});
-      setIsSent(false);
-    })
-    .catch((err) => {
-      console.error("Email sending failed", err);
-    })
-    .finally(() => {
-      setIsLoading(false);
-    });
+
   const validateForm = () => {
     const { name, email, message } = formData;
     const errors = {};
