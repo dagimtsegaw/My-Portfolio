@@ -5,6 +5,7 @@ import subheadingsData from "./subheadingsData";
 import personalIcon from "../../assets/moebius-triangle.png";
 import educationIcon from "../../assets/upgrade.png";
 import carrerIcon from "../../assets/triple-corn.png";
+import "../Skills/skillsMenu.css";
 
 export default class AboutMenu extends Component {
   constructor(props) {
@@ -47,19 +48,19 @@ export default class AboutMenu extends Component {
         </div>
         <div className="sub-container">
           <div className="icon-title-container">
-            <img src={activeMenuIcon} alt={activeMenuTitle} />
+            <img src={activeMenuIcon} alt={activeMenuTitle} className="icon" />
             <h3>{activeMenuTitle}</h3>
-            {subheadings.map((subheading, index) => (
-              <AboutSubheading
-                key={index}
-                title={subheading.title}
-                content={subheading.content}
-                active={activeSubheading === index + 1}
-                onClick={() => this.handleSubheadingClick(index + 1)}
-                menuItem={activeMenuItem}
-              />
-            ))}
           </div>
+          {subheadings.map((subheading, index) => (
+            <AboutSubheading
+              key={index}
+              title={subheading.title}
+              content={subheading.content}
+              active={activeSubheading === index + 1}
+              onClick={() => this.handleSubheadingClick(index + 1)}
+              menuItem={activeMenuItem}
+            />
+          ))}
         </div>
       </>
     );
