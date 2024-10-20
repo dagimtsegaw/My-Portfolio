@@ -6,7 +6,7 @@ export default class Projects extends Component {
     //acess the project menu component
     return (
       <>
-        <ProjectsMenu />;
+        <ProjectsMenu />
       </>
     );
   }
