@@ -40,4 +40,105 @@ export default function ContactMenu() {
     const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
     const userID = process.env.REACT_APP_EMAILJS_USER_ID;
   };
+  emailjs
+    .send(serviceID, templateID, sanitizedData, userID)
+    .then((res) => {
+      console.log("Email is sent successfully", res.text);
+      setFormData(initialState);
+      setErrors({});
+      setIsSent(false);
+    })
+    .catch((err) => {
+      console.error("Email sending failed", err);
+    })
+    .finally(() => {
+      setIsLoading(false);
+    });
+  const validateForm = () => {
+    const { name, email, message } = formData;
+    const errors = {};
+
+    if (!name.trim()) {
+      errors.name = "Name is required";
+    }
+    if (!email.trim()) {
+      errors.email = "Email is required";
+    } else if (!isValidEmail(email)) {
+      errors.email = "Invalid email format";
+    }
+    if (!message.trim()) {
+      errors.message = "Message is required";
+    }
+    return errors;
+  };
+  const isValidEmail = (value) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(value);
+  };
+
+  return (
+    <div className="contact-menu">
+      {!isSent && (
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Name"
+              value={formData.name}
+              onChange={handleChange}
+              className={errors.name ? "error" : ""}
+              disabled={isLoading}
+            />
+            {errors.name && (
+              <span className="error-message">{errors.name}</span>
+            )}
+          </div>
+          <div className="form-group">
+            <label htmlFor="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              value={formData.email}
+              onChange={handleChange}
+              className={errors.email ? "error" : ""}
+              disabled={isLoading}
+            />
+            {errors.email && (
+              <span className="error-message">{errors.email}</span>
+            )}
+          </div>
+          <div className="form-group">
+            <label htmlFor="message">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Enter message"
+              value={formData.message}
+              onChange={handleChange}
+              className={errors.message ? "error" : ""}
+              disabled={isLoading}
+            ></textarea>
+            {errors.message && (
+              <span className="error-message">{errors.message}</span>
+            )}
+          </div>
+          <button type="submit" disabled={isLoading}>
+            {isLoading ? "Sending..." : "SUBMIT"}
+          </button>
+        </form>
+      )}
+      {isSent && (
+        <div className="success-message">
+          <p>SUCCESS!</p>
+          <p>Your message has been successfully sent!</p>
+          <p>You can safely leave this page.</p>
+        </div>
+      )}
+    </div>
+  );
 }
