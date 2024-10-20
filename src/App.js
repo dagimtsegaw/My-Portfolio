@@ -10,6 +10,7 @@ import Background from "./Components/Background/Background.js";
 import PlayerStats from "./Components/PlayerStats/PlayerStats.js";
 
 const App = () => {
+  // this app.js collects every other components and renders them in order
   return (
     <Router>
       <Nav />
