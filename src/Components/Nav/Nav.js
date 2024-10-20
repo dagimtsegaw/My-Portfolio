@@ -14,7 +14,7 @@ import envelope from "../../assets/envelope.png";
 
 export default function Nav() {
   const location = useLocation();
-
+  ///assigning class to the nav icons
   const getNavPositionClass = () => {
     switch (location.pathname) {
       case "/":
