@@ -60,6 +60,7 @@ export default function Nav() {
       </Link>
     );
   };
+  //this is the one that is gonna be rendered it also uses the variables that are already assigned not a hard code
   return (
     <nav className={`nav ${navPositionClass}`}>
       {renderNavLink("/", astronautHelmet, "astronautHelmet icon", "nav-about")}
