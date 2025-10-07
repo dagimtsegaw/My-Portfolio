@@ -49,7 +49,7 @@ a {
     transform: translateX(0);
   }
   .nav {
-    top: calc(100vh - 8rem);
+    top: calc(100vh - 6rem);
     bottom: 0%;
     transform: translateX(-50%);
   }
