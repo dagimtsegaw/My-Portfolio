@@ -80,6 +80,53 @@ button {
   border-radius: 0.2rem;
 }
 
+.social-links a {
+  color: #fff;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+/* GitHub: white circle with black icon */
+.social-links a.github:hover {
+  color: #000;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* LinkedIn: blue circle with white icon */
+.social-links a.linkedin:hover {
+  color: #fff;
+  background-color: #0e76a8;
+  box-shadow: 0 0 10px rgba(14, 118, 168, 0.4);
+}
+
+/* Telegram: blue circle with white icon */
+.social-links a.telegram:hover {
+  color: #fff;
+  background-color: #0088cc;
+  box-shadow: 0 0 10px rgba(0, 136, 204, 0.4);
+}
+
+/* Instagram: pink/purple circle with white icon */
+.social-links a.instagram:hover {
+  color: #fff;
+  background: linear-gradient(
+    45deg,
+    #f09433,
+    #e6683c,
+    #dc2743,
+    #cc2366,
+    #bc1888
+  );
+  box-shadow: 0 0 10px rgba(225, 48, 108, 0.4);
+}
+
 label {
   display: none;
 }

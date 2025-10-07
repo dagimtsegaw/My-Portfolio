@@ -3,7 +3,7 @@ import projects from "./projectsData";
 import classNames from "classnames";
 import "./projectsMenu.css";
 
-export default class extends Component {
+class ProjectsMenu extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -21,15 +21,37 @@ export default class extends Component {
     return projects.map((project, index) => (
       <div key={index} className={`project-sub-container-${index + 1}`}>
         <h3>{project.title}</h3>
-        <img src={project.image} alt={project.tilte} />
+
+        {project.demo ? (
+          <a
+            href={project.demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="image-link"
+          >
+            <img src={project.image} alt={project.title} />
+          </a>
+        ) : (
+          <img src={project.image} alt={project.title} />
+        )}
+
         <div>{project.description}</div>
-        <div className="link-container">
-          <a href={project.github} target="_blank" rel="noopener noreferrer">
-            GITHUB
-          </a>
-          <a href={project.demo} target="_blank" rel="noopener noreferrer">
-            DEMO
-          </a>
+
+        <div
+          className={`link-container ${
+            !project.github && project.demo ? "center-demo" : ""
+          }`}
+        >
+          {project.github && (
+            <a href={project.github} target="_blank" rel="noopener noreferrer">
+              GITHUB
+            </a>
+          )}
+          {project.demo && (
+            <a href={project.demo} target="_blank" rel="noopener noreferrer">
+              DEMO
+            </a>
+          )}
         </div>
       </div>
     ));
@@ -60,3 +82,5 @@ export default class extends Component {
     );
   }
 }
+
+export default ProjectsMenu;
