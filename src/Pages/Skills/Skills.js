@@ -4,7 +4,7 @@ import SkillsMenu from "./SkillsMenu";
 
 export default class Skills extends Component {
   render() {
-    //acesss the avatar from the avatar component
+    //acesss the avatar from the avatar componen
     return (
       <>
         <Avatar page="skills" />
